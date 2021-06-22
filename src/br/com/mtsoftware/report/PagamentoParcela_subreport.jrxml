@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="PagamentoParcela_subreport" language="groovy" pageWidth="752" pageHeight="572" orientation="Landscape" columnWidth="752" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="21fc9074-5d97-4009-9ea4-f3f2d5ee44c9">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select*from tbempresa]]>
+	</queryString>
+	<field name="nome" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nif" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="endereco" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefone" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="email" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="log" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="logimagem" class="java.io.InputStream">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<title>
+		<band height="105" splitType="Stretch">
+			<image>
+				<reportElement x="10" y="10" width="110" height="75" uuid="c2cc7de4-616d-4d13-a2f0-9a7643af9d65"/>
+				<imageExpression><![CDATA[$F{logimagem}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="177" y="56" width="244" height="29" uuid="820d6f1f-8222-455f-be03-e80f1de5f81b"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ PAGAMENTO DE PROPINAS]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="102" width="752" height="3" forecolor="#000099" backcolor="#3366FF" uuid="ca6cbeac-2a1e-4c16-a920-e4e33b3ce099"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="138" splitType="Stretch">
+			<staticText>
+				<reportElement x="120" y="30" width="100" height="20" uuid="89249b9a-5a39-4977-b109-475b3cd9daab"/>
+				<text><![CDATA[NIF]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="120" y="52" width="100" height="20" uuid="0b032eb1-507d-421a-bab5-0dc35cafdd4b"/>
+				<text><![CDATA[Endereço]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="120" y="70" width="100" height="20" uuid="9e867932-87c0-4eab-93de-0903a73167e0"/>
+				<text><![CDATA[Telefone]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="314" y="10" width="285" height="20" uuid="679f6aec-f7ab-4b18-b13a-c00774c3f460"/>
+				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="120" y="10" width="100" height="20" uuid="a1c3520c-483e-436f-9fa6-01d9c85ee86b"/>
+				<text><![CDATA[Empresa]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="314" y="90" width="285" height="20" uuid="63e0be40-9a11-48d4-88ee-e6166585b993"/>
+				<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="314" y="53" width="285" height="20" uuid="a9881e44-1777-480f-90f6-0656d434dedf"/>
+				<textFieldExpression><![CDATA[$F{endereco}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="314" y="72" width="285" height="20" uuid="823637e4-18ab-4734-8f59-91639a4ce255"/>
+				<textFieldExpression><![CDATA[$F{telefone}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="314" y="30" width="285" height="20" uuid="6196015b-9c6b-40cc-9056-0d46d4e72e81"/>
+				<textFieldExpression><![CDATA[$F{nif}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="120" y="90" width="100" height="20" uuid="14ed75ea-acdf-49cc-a122-f1e7209db6bc"/>
+				<text><![CDATA[Email]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+</jasperReport>

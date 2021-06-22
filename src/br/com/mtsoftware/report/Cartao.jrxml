@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Cartao" language="groovy" columnCount="2" printOrder="Horizontal" pageWidth="595" pageHeight="900" columnWidth="272" columnSpacing="10" leftMargin="20" rightMargin="20" topMargin="10" bottomMargin="10" uuid="7de51117-a11a-44fc-9341-67a65f2ce5d3">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\Report\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select*from tbalunos]]>
+	</queryString>
+	<field name="idaluno" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nomealuno" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="classealuno" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="endealuno" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fonealuno" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="emailaluno" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="encarregaluno" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nascaluno" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="localnascaluo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="valorinscr" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nomeimagem" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="imagem" class="java.io.InputStream">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="turno" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="salan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="turman" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="217" splitType="Stretch">
+			<rectangle radius="10">
+				<reportElement x="12" y="0" width="270" height="216" isRemoveLineWhenBlank="true" forecolor="#0000FF" backcolor="#FFFFFF" uuid="2c308d96-4694-4818-8d51-065575d6a449"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="12" y="135" width="270" height="71" backcolor="#000000" uuid="1e732e68-722c-4cc6-bd64-398f8a366352"/>
+				<graphicElement>
+					<pen lineColor="#3333FF"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="65" y="47" width="149" height="14" uuid="93bf0d04-3aa0-490d-8a11-167b13560b95"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ REPÚBLICA DE ANGOLA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="51" y="61" width="184" height="14" uuid="a4c356e1-6dd2-4197-8d23-0eedc50d46c0"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ MINISTÉRIO DA EDUCAÇÃO]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="12" y="95" width="270" height="40" forecolor="#FFFFFF" backcolor="#3366FF" uuid="a985055f-21c9-48d0-a047-fc6a0403f1a7"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="22" y="95" width="213" height="25" forecolor="#00FF00" uuid="679af0f4-63fa-4aa3-8f34-09e562671337"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cartão de Estudante]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="12" y="139" width="53" height="20" forecolor="#FFFFFF" uuid="10c948fd-91e5-4ff1-916d-3dab67ee65af"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="12" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[ Nome:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="12" y="161" width="39" height="13" forecolor="#FFFFFF" uuid="00af93fc-2238-4001-8a8b-978ee638b650"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="10" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[ ID:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="63" y="159" width="48" height="14" forecolor="#FFFFFF" uuid="5811c630-8d57-407e-93dc-0b877d3273ca"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="10" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[ Classe:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="211" y="159" width="60" height="15" forecolor="#FFFFFF" uuid="7f2399ee-b69e-4772-9535-c5ce1c334c7f"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="10" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[ Turno:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="161" y="159" width="39" height="15" forecolor="#FFFFFF" uuid="53bfbfd2-3960-42a5-9568-5d8a3f0ce20a"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="10" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[ Sala:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="65" y="139" width="206" height="20" forecolor="#FF9900" uuid="d95ad490-e45d-4725-88f8-8df0e3a8e4b2"/>
+				<textElement verticalAlignment="Bottom">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nomealuno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="15" y="173" width="36" height="20" forecolor="#FF9900" uuid="a8cdcdad-69a9-4faa-a056-201688c823db"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{idaluno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="65" y="180" width="96" height="14" forecolor="#FF9900" uuid="6421144e-6c48-4089-a6a0-3b7693a8a158"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{classealuno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="211" y="174" width="71" height="20" forecolor="#FF9900" uuid="e18ca44d-1870-463e-b5a6-89e1a85a0d62"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{turno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="172" y="174" width="39" height="20" forecolor="#FF9900" uuid="f5421adb-75a6-4a66-9e65-f7ec17b8deef"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{salan}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement mode="Opaque" x="229" y="17" width="42" height="40" backcolor="#CCCCCC" uuid="2f63a6d5-f940-4661-b3fd-d4803626fe50"/>
+				<imageExpression><![CDATA[$F{imagem}]]></imageExpression>
+			</image>
+			<componentElement>
+				<reportElement x="22" y="206" width="249" height="10" uuid="6fb9d93b-0518-4944-83f7-6314cf2ee23c"/>
+				<jr:barbecue xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" type="Code128" drawText="false" checksumRequired="false">
+					<jr:codeExpression><![CDATA[$F{idaluno}]]></jr:codeExpression>
+				</jr:barbecue>
+			</componentElement>
+			<subreport>
+				<reportElement x="12" y="47" width="270" height="20" uuid="8d0ce8d1-58f5-4031-930b-976e7f64b1a3"/>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "Cartao_empresa.jasper"]]></subreportExpression>
+			</subreport>
+			<image>
+				<reportElement x="122" y="17" width="33" height="30" uuid="452c4887-5b00-4e12-a090-194fba013d47"/>
+				<imageExpression><![CDATA["D:\\Curso php\\New Insignia.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="60" y="118" width="95" height="17" forecolor="#FFFFFF" uuid="0759d688-371f-47b1-810d-9fc2f788771e"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ANO LECTIVO:]]></text>
+			</staticText>
+			<textField pattern="yyyy/MM/dd">
+				<reportElement x="155" y="115" width="28" height="20" forecolor="#FFFF00" uuid="a90052da-c5a8-42a4-99e2-f41f53e89597"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

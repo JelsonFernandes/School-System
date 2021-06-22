@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Matricula_Empresa" language="groovy" pageWidth="752" pageHeight="572" orientation="Landscape" columnWidth="752" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a6256a2a-49e5-4623-a8dd-3ca51ab1c1b6">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select*from tbempresa]]>
+	</queryString>
+	<field name="nome" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nif" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="endereco" class="java.lang.String"/>
+	<field name="telefone" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="email" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="log" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="logimagem" class="java.lang.Object">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="128" y="40" width="282" height="29" uuid="10e740ef-ff61-46bb-9ce0-b36b3770264f"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[COMPROVATIVO DE MATRICULA]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="354" y="89" width="285" height="20" uuid="e510d61a-49c4-494e-ae5a-4fcf356b6137"/>
+				<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="160" y="29" width="100" height="20" uuid="a0e70620-55e5-4093-9e74-be7547ed9f1c"/>
+				<text><![CDATA[NIF]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="354" y="29" width="285" height="20" uuid="0c92c016-8860-4e6e-a488-0013e84659d5"/>
+				<textFieldExpression><![CDATA[$F{nif}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="354" y="9" width="285" height="20" uuid="5bd02995-bdec-47ce-be9a-9e38bf216211"/>
+				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="354" y="49" width="285" height="20" uuid="39055beb-1efc-4b67-83bc-5fcad8aa72d7"/>
+				<textFieldExpression><![CDATA[$F{endereco}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="160" y="51" width="100" height="20" uuid="5fbf45eb-16d5-4db1-86b5-1a94b24d722b"/>
+				<text><![CDATA[Endereço]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="160" y="9" width="100" height="20" uuid="e0e6e50b-c029-4f9e-9e5c-ca2b621eaf69"/>
+				<text><![CDATA[Empresa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="160" y="89" width="100" height="20" uuid="99d0e467-a2cb-40e6-adc7-e6d9ca5608f9"/>
+				<text><![CDATA[Email]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="354" y="71" width="285" height="20" uuid="2c7a8a87-b012-4ae5-b93f-e080961bc581"/>
+				<textFieldExpression><![CDATA[$F{telefone}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="160" y="69" width="100" height="20" uuid="10fde68e-8248-4a37-9e8b-92dd5a46d85c"/>
+				<text><![CDATA[Telefone]]></text>
+			</staticText>
+			<image>
+				<reportElement x="28" y="9" width="125" height="100" uuid="8b094774-dad5-4baa-8ce2-54bf10ca4620"/>
+				<imageExpression><![CDATA[]]></imageExpression>
+			</image>
+		</band>
+	</detail>
+</jasperReport>

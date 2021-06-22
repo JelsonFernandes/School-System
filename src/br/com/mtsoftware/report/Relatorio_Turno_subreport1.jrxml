@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Relatorio_Turno_subreport1" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="7edd1041-af7a-4dca-8296-04b4623f3ede">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select*from tbempresa]]>
+	</queryString>
+	<field name="nome" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="representante" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nif" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="endereco" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="numfunciocionarios" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefone" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="email" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="log" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="logimagem" class="java.io.InputStream">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="132" splitType="Stretch">
+			<staticText>
+				<reportElement x="359" y="73" width="61" height="20" uuid="13282d36-b788-4115-81ac-3dbc429567e5"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[E-MAIL:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="423" y="10" width="122" height="15" forecolor="#0000FF" uuid="5112f7bb-0437-4477-ac97-435aab8affb6"/>
+				<textFieldExpression><![CDATA[$F{nif}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="423" y="25" width="122" height="19" forecolor="#0000FF" uuid="78362372-d154-449d-9b91-5b67c47733d0"/>
+				<textFieldExpression><![CDATA[$F{endereco}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="359" y="10" width="22" height="20" uuid="fd86072a-8af8-42dd-9761-d591af5ff375"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[NIF:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="359" y="53" width="61" height="20" uuid="0cc21bcc-29d5-41e5-bb2e-9a22c9701040"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[TELEFONE:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="359" y="30" width="61" height="20" uuid="05438cf7-eb2f-4a89-8aaa-08385f121962"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ENDEREÇO:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="82" y="61" width="248" height="20" forecolor="#0000FF" uuid="bea82a79-2463-477a-8db7-07c89d276e3d"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="423" y="50" width="122" height="20" forecolor="#0000FF" uuid="3ff6aebe-fccd-46c0-9d4a-7974c097bf5c"/>
+				<textFieldExpression><![CDATA[$F{telefone}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="423" y="70" width="122" height="20" forecolor="#0000FF" uuid="8260ebea-11ee-4f2a-90a8-34444dc06a45"/>
+				<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="426" y="94" width="100" height="20" uuid="fb7945ec-2da1-4356-9d96-474ca157ef2f"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="10" y="33" width="72" height="48" uuid="a9fcaded-97f9-4c9a-97ae-3c435f3b32cd"/>
+				<imageExpression><![CDATA[$F{logimagem}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="82" y="81" width="248" height="20" forecolor="#FF0033" uuid="fdc57ccb-1f43-4cc1-aae3-b5431f218ce2"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Relatório de Alunos Por Classe]]></text>
+			</staticText>
+			<line>
+				<reportElement x="357" y="92" width="198" height="1" forecolor="#FF0066" uuid="cee21195-4b48-4122-9f76-a6b264925fbd"/>
+			</line>
+			<line>
+				<reportElement x="356" y="9" width="1" height="83" forecolor="#FF3366" uuid="c8c6bd2f-57f2-4c49-9e7c-19641908a040"/>
+			</line>
+			<line>
+				<reportElement x="-346" y="80" width="702" height="1" forecolor="#FF0033" uuid="9599a051-0700-4707-b6c0-4be48621dc9b"/>
+			</line>
+			<line>
+				<reportElement x="0" y="131" width="555" height="1" uuid="ffdaf021-d164-4462-84ef-b8267fb7879a"/>
+			</line>
+		</band>
+	</title>
+</jasperReport>

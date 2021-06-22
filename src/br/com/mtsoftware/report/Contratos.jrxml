@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Matricula" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="fd88b4f1-c454-49b5-b1fd-4fbe40f14498">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#CCCCCC" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true" pdfFontName="Times-Roman"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#F0EFEF"/>
+		</conditionalStyle>
+	</style>
+	<parameter name="Contrato" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\Report\\"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="id_contrato" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select*from tbacontratos where id_contrato=$P{id_contrato}]]>
+	</queryString>
+	<field name="id_contrato" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="datacontrato" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nome" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="classealuno" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="objectocontrato" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nparcelas" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="valor" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="vencipriparce" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="obs" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="idaluno" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<variable name="id_contrato_1" class="java.lang.Integer" resetType="Group" resetGroup="Group2" calculation="Sum">
+		<variableExpression><![CDATA[$F{id_contrato}]]></variableExpression>
+	</variable>
+	<group name="Group1">
+		<groupExpression><![CDATA[(int)($V{REPORT_COUNT}/15)]]></groupExpression>
+		<groupHeader>
+			<band height="14">
+				<frame>
+					<reportElement mode="Opaque" x="-2" y="1" width="555" height="13" forecolor="#B89F7D" backcolor="#000000" uuid="c555121e-e34d-4777-a3c8-f986805b2964"/>
+				</frame>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<group name="Group2">
+		<groupExpression><![CDATA[(int)($V{REPORT_COUNT}/5)]]></groupExpression>
+		<groupHeader>
+			<band height="30">
+				<textField evaluationTime="Group" evaluationGroup="Group2">
+					<reportElement x="2" y="0" width="46" height="20" uuid="4ba02960-9c2a-4f73-b3c4-7151abe758c8"/>
+					<textFieldExpression><![CDATA[$V{id_contrato_1}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="48" y="0" width="151" height="20" uuid="e5e0da2d-b9a6-4415-988b-ed4d295d079a"/>
+					<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="199" y="0" width="41" height="20" uuid="9dd088de-1fcc-4625-9506-682100e40a50"/>
+					<textFieldExpression><![CDATA[$F{classealuno}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="247" y="0" width="74" height="20" uuid="b9da83f7-7ea8-49ac-aa38-b01f5a0b07c8"/>
+					<textFieldExpression><![CDATA[$F{objectocontrato}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="393" y="0" width="61" height="20" uuid="aed95b46-44db-4015-a098-4e608e19d217"/>
+					<textFieldExpression><![CDATA[$F{valor}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="483" y="0" width="82" height="20" uuid="4e6e9884-da86-4960-bfdb-b16503ad4e48"/>
+					<textFieldExpression><![CDATA[$F{vencipriparce}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="333" y="0" width="34" height="20" uuid="f7edcae5-1545-423b-b355-e8813b2eb6bc"/>
+					<textFieldExpression><![CDATA[$F{nparcelas}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="132" splitType="Stretch">
+			<subreport>
+				<reportElement x="2" y="11" width="122" height="100" uuid="6cdaeab5-fd42-4931-b02f-86a6d3a989b5"/>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "Matricula_Empresa.jasper"]]></subreportExpression>
+			</subreport>
+			<textField pattern="dd/MM/yyyy HH.mm.ss">
+				<reportElement x="453" y="11" width="100" height="20" uuid="fdf5d5a7-6f2e-4247-a0f1-99834f30f73e"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="42" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="22" width="48" height="20" uuid="21af1905-8c52-44d2-900b-76ed9747f298"/>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="48" y="22" width="48" height="20" uuid="50d5a054-d8d5-48f7-88dd-7aef1f569680"/>
+				<text><![CDATA[Nome]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="199" y="22" width="48" height="20" uuid="6a989965-2cc8-4fd4-abb1-6d59476dd28a"/>
+				<text><![CDATA[Classe]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="247" y="22" width="48" height="20" uuid="41f950c1-48b5-4703-a939-d0e939df9a2c"/>
+				<text><![CDATA[Objectivo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="379" y="22" width="94" height="20" uuid="3bf8d3eb-57d9-4380-963d-c5518cc342f1"/>
+				<text><![CDATA[Valor do Contrato]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="473" y="22" width="48" height="20" uuid="745d10a2-100a-40eb-ba77-a77bc16e4d7c"/>
+				<text><![CDATA[       Data  ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="308" y="22" width="71" height="20" uuid="3d0d6a65-3dbe-4a6a-982f-dbabc4a385dc"/>
+				<text><![CDATA[Nº Parcelas]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="18" splitType="Stretch">
+			<frame>
+				<reportElement style="Row" mode="Opaque" x="0" y="0" width="555" height="18" uuid="50f4bd03-6910-4341-8857-0132a367a1b9"/>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="52" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="2a545f89-686f-4b56-ab11-a35a636f9fa8"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="4" y="17" width="549" height="18" uuid="55bd3825-055c-4304-b35e-0560feb414eb"/>
+				<text><![CDATA[            ********OBRIGADO POR FAZERES DE DE NÓS A TUA PREFERÊNCIA***********VOLTE SEMPRE*********]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+</jasperReport>

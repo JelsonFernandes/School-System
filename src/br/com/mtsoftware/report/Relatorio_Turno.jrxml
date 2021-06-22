@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Relatorio_Turno" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c38f1e9e-c491-44fc-b06c-d41119a4ea3e">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="turno" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\Report\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select*from tbalunos where turno=$P{turno}]]>
+	</queryString>
+	<field name="idaluno" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nomealuno" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="classealuno" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="endealuno" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fonealuno" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="emailaluno" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="encarregaluno" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nascaluno" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="localnascaluo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="valorinscr" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nomeimagem" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="imagem" class="java.lang.Object">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="turno" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="salan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="turman" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="112" splitType="Stretch">
+			<staticText>
+				<reportElement x="288" y="92" width="100" height="20" uuid="501522e6-c5ad-44ae-b8eb-3bd88f200d96"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Encarregado]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="403" y="92" width="71" height="20" uuid="784b6d94-aea9-45f7-b2e0-44e1a3954dc0"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ Nascimento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="513" y="92" width="42" height="20" uuid="64f17362-0d22-4139-b784-8264d77aa9ce"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sala]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="39" y="92" width="100" height="20" uuid="1be10de0-962d-4192-aca7-aa3caf8d6064"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nome]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="92" width="22" height="20" uuid="6ea322cc-1f24-41b2-aa6c-7a6f0114227d"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="210" y="92" width="78" height="20" uuid="cc0bc874-d835-49f0-891f-246a9e5a9354"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Endereço]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="165" y="92" width="45" height="20" uuid="8cf2a37a-20c4-4845-a005-577552223bd9"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Classe]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="474" y="92" width="39" height="20" uuid="f39aacb9-fc01-467e-a347-521150044662"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Turno]]></text>
+			</staticText>
+			<subreport>
+				<reportElement x="1" y="-16" width="570" height="38" uuid="9a98f80a-fbb9-4446-9298-4b52c3a31181"/>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "Relatorio_Turno_subreport1.jasper"]]></subreportExpression>
+			</subreport>
+			<line>
+				<reportElement x="1" y="92" width="554" height="1" forecolor="#0033FF" uuid="aac0dfb4-7e9f-45f6-98da-d873f603b7a9"/>
+			</line>
+		</band>
+	</title>
+	<detail>
+		<band height="36" splitType="Stretch">
+			<textField>
+				<reportElement x="513" y="0" width="42" height="20" uuid="950d92e2-be82-4f37-be3d-c9a676c7cc30"/>
+				<textFieldExpression><![CDATA[$F{salan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="165" y="0" width="45" height="20" uuid="89723e88-6876-48e1-b01a-029cefcc639e"/>
+				<textFieldExpression><![CDATA[$F{classealuno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="405" y="0" width="58" height="20" uuid="8883c0d7-d690-41f3-94ea-eb6388143572"/>
+				<textFieldExpression><![CDATA[$F{nascaluno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="39" y="0" width="126" height="20" uuid="f8f53206-1de3-4753-9dcb-1596fe29db7e"/>
+				<textFieldExpression><![CDATA[$F{nomealuno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1" y="0" width="28" height="20" uuid="829f303f-4f08-4bae-93c8-15cf035ccbda"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{idaluno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="210" y="0" width="78" height="20" uuid="5573d3f9-c3b8-4db7-8483-9c1d151411c2"/>
+				<textFieldExpression><![CDATA[$F{endealuno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="474" y="0" width="39" height="20" uuid="b72d769a-7171-4ec5-956f-a3bd46370dc9"/>
+				<textFieldExpression><![CDATA[$F{turno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="288" y="0" width="104" height="20" uuid="69050d00-0d0f-4fe2-9145-97280e673acd"/>
+				<textFieldExpression><![CDATA[$F{encarregaluno}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="50">
+			<textField>
+				<reportElement x="421" y="30" width="80" height="20" uuid="9c08136c-5fcf-4623-b20f-b08f1d25ce78"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="501" y="30" width="40" height="20" uuid="dac7fc77-ebbd-490a-8e3c-55adce3ad7af"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="PagamentoParcela" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5d42525c-b6e3-4951-a15c-14809f94ee79">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="contrato" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\Report\\"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="parcela" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="Num_Parcela" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select*from tbparcelas where id_contrato =$P{contrato} and num_parcela=$P{Num_Parcela}]]>
+	</queryString>
+	<field name="id_parcela" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id_contrato" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="valor_contrato" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="valor_total" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="valorparc" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="num_parcela" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="data_venc" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Estado" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="dataat" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="desconto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="multa" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="totalapag" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="76" splitType="Stretch">
+			<subreport>
+				<reportElement x="-28" y="-3" width="200" height="79" uuid="d85b5d82-d60d-4a7f-8317-6250a7fc853d"/>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "PagamentoParcela_subreport.jasper"]]></subreportExpression>
+			</subreport>
+			<textField pattern="dd/MM/yyyy HH.mm.ss">
+				<reportElement x="444" y="7" width="100" height="20" uuid="eab5e9df-30af-4f4e-b9c9-27448b10d721"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<line>
+				<reportElement x="-146" y="0" width="725" height="1" forecolor="#000099" backcolor="#3366FF" uuid="3e5589cc-598a-46f2-be85-91f2f1a39320"/>
+			</line>
+			<line>
+				<reportElement x="-28" y="1" width="607" height="1" forecolor="#000099" backcolor="#3366FF" uuid="32564717-ce02-4cb9-9e64-ca52e5d380ad"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="43" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="63" height="20" uuid="0c0ebf4b-1fa7-4ec7-9ee5-28aee3ef3212"/>
+				<text><![CDATA[ID Cotrato]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="63" y="0" width="62" height="20" uuid="2464334e-b5d0-4866-ab9c-91445d701e42"/>
+				<text><![CDATA[ID Parcela]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="125" y="0" width="35" height="20" uuid="2f7d36c0-23dd-4891-b644-7de52dc073f4"/>
+				<text><![CDATA[Valor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="172" y="0" width="46" height="20" uuid="f1f558c2-e6fd-49f8-8af1-28c4968e3aa9"/>
+				<text><![CDATA[Nº Parcela]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="218" y="0" width="64" height="20" uuid="1de1157b-77c0-4831-a7af-58b9ee7525b7"/>
+				<text><![CDATA[Vencimento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="293" y="0" width="54" height="20" uuid="363ee444-7e9c-4c6f-a760-365e51dfc87e"/>
+				<text><![CDATA[Situação]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="347" y="0" width="64" height="20" uuid="499a2909-a4e1-441f-a44b-efa0c6dc3bf8"/>
+				<text><![CDATA[Pagamento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="411" y="0" width="49" height="20" uuid="291c6cb5-bf5e-4680-81ed-c9fe3b6dab01"/>
+				<text><![CDATA[Desconto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="471" y="0" width="52" height="20" uuid="7a23f3ce-abbb-43a2-8e96-065f45f502f6"/>
+				<text><![CDATA[Multa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="523" y="0" width="45" height="20" uuid="b8b50000-d81e-48e8-af8d-4422dafe37e9"/>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="36" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="63" height="20" uuid="f5d72d97-cf44-4b95-a70d-ffe3cac6ebdc"/>
+				<textFieldExpression><![CDATA[$F{id_contrato}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="78" y="0" width="33" height="20" uuid="4bb69a8a-d332-4a97-b5ea-e70b2f96d28b"/>
+				<textFieldExpression><![CDATA[$F{id_parcela}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="125" y="0" width="46" height="20" uuid="d8d0ccb4-0db3-40c9-a8d7-093ef3238c8f"/>
+				<textFieldExpression><![CDATA[$F{valorparc}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="172" y="0" width="46" height="20" uuid="fa85697c-3418-4020-bb73-0c5376b6daba"/>
+				<textFieldExpression><![CDATA[$F{num_parcela}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="218" y="0" width="75" height="20" uuid="5477fe29-49b0-4032-aa32-00ea92d03ae9"/>
+				<textFieldExpression><![CDATA[$F{data_venc}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="293" y="0" width="54" height="20" uuid="5aaea3d4-2a84-4dea-8c56-820bba6f8668"/>
+				<textFieldExpression><![CDATA[$F{Estado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="350" y="0" width="61" height="20" uuid="8d8c8b33-93fc-4a8f-97fe-a3b5d23de5c8"/>
+				<textFieldExpression><![CDATA[$F{dataat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="411" y="0" width="49" height="20" uuid="478b85fe-adf9-4559-bdba-7d60b36c966f"/>
+				<textFieldExpression><![CDATA[$F{desconto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="471" y="0" width="52" height="20" uuid="a97b1b66-aa72-4e2f-8f8c-f3a2cc1b1963"/>
+				<textFieldExpression><![CDATA[$F{multa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="523" y="0" width="45" height="20" uuid="b2044c01-660f-4f37-841b-cf8427f97d8f"/>
+				<textFieldExpression><![CDATA[$F{totalapag}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<line>
+				<reportElement x="-28" y="0" width="607" height="1" forecolor="#000099" backcolor="#3366FF" uuid="172ffb90-ebbe-4c42-8fd1-4de78726bde3"/>
+			</line>
+			<textField>
+				<reportElement x="411" y="19" width="80" height="20" uuid="61a51252-10ba-4ec4-a1ad-2c23f463f272"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="504" y="19" width="40" height="20" uuid="180f0948-c31e-4c07-8952-9ef8c6dfe2d6"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

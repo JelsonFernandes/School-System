@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="FacturaPagamento" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d6970e97-7311-4694-bb9f-ba8d28ae6723">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<field name="codParc" class="java.lang.String"/>
+	<field name="datavenc" class="java.lang.String"/>
+	<field name="CodContr" class="java.lang.String"/>
+	<field name="valor" class="java.lang.String"/>
+	<field name="data_pag" class="java.lang.String"/>
+	<field name="vmulta" class="java.lang.String"/>
+	<field name="vdesconto" class="java.lang.String"/>
+	<field name="totalpag" class="java.lang.String"/>
+	<field name="num_parcela" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="15" width="46" height="20" uuid="6d0f37d2-a582-4a66-8e62-9261b4562929"/>
+				<text><![CDATA[ID Matr]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="46" y="15" width="63" height="20" uuid="50c71ca5-5f53-44ac-b9f4-2f76a4094d88"/>
+				<text><![CDATA[ID Marcela]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="109" y="15" width="57" height="20" uuid="c57ea5f5-aabe-45f8-a3e0-d691f716f0bf"/>
+				<text><![CDATA[Nº Parcela]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="166" y="15" width="74" height="20" uuid="89876d4b-9f37-49a3-bddb-03488a8106fd"/>
+				<text><![CDATA[Vencimento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="240" y="15" width="75" height="20" uuid="4e7cf187-ab58-4848-b260-e1ea85ca19ae"/>
+				<text><![CDATA[Pagamento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="315" y="15" width="76" height="20" uuid="f04339f8-8821-40e3-bebb-71ce15f76cc8"/>
+				<text><![CDATA[Valor Parcela]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="391" y="15" width="45" height="20" uuid="a6ab0921-3396-4a6d-b09e-92ec03b77bbb"/>
+				<text><![CDATA[Multa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="436" y="15" width="49" height="20" uuid="f039a4ff-5989-4cca-be00-8d0345a98c37"/>
+				<text><![CDATA[Desconto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="485" y="15" width="56" height="20" uuid="9c150e7c-b5d6-486d-8117-67cd0fe12855"/>
+				<text><![CDATA[ToTal]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="41" width="46" height="20" uuid="ea45458d-ece5-411f-aa80-990005572563"/>
+				<textFieldExpression><![CDATA[$F{CodContr}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="46" y="41" width="63" height="20" uuid="2e916517-c8f6-4589-b8fc-dfbc06ff019b"/>
+				<textFieldExpression><![CDATA[$F{codParc}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="109" y="41" width="57" height="20" uuid="fd32dfd0-38a9-4fc0-a238-dcee6fd2d195"/>
+				<textFieldExpression><![CDATA[$F{num_parcela}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="166" y="41" width="74" height="20" uuid="a4f117a1-e97e-476a-9668-4cb8ad687058"/>
+				<textFieldExpression><![CDATA[$F{datavenc}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="240" y="41" width="75" height="20" uuid="d5833945-ccc5-42fd-9ce6-efbb92fc0b35"/>
+				<textFieldExpression><![CDATA[$F{data_pag}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="315" y="41" width="76" height="20" uuid="62077296-cabe-4594-90cd-43e76d2264dd"/>
+				<textFieldExpression><![CDATA[$F{valor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="391" y="41" width="45" height="20" uuid="c86a4cf6-443d-41c4-abda-fa173ef53677"/>
+				<textFieldExpression><![CDATA[$F{vmulta}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="431" y="41" width="54" height="20" uuid="f202d7fd-35d5-4557-9851-54a22105e7d5"/>
+				<textFieldExpression><![CDATA[$F{vdesconto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="485" y="41" width="55" height="20" uuid="9b8a4501-dee2-4c60-947f-d97685440ba8"/>
+				<textFieldExpression><![CDATA[$F{totalpag}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Pagos_Naopagos_subreport1" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="e04711d2-b89a-4577-b010-d835c7644402">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT*FROM tbempresa]]>
+	</queryString>
+	<field name="nome" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nif" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefone" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="email" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="log" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="logimagem" class="java.io.InputStream">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="endereco" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="173" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="105" width="555" height="29" uuid="fa5a3f95-498d-4b3f-84f1-f3fc15f88a97"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="339" y="30" width="216" height="20" forecolor="#0000FF" uuid="bc14386a-dace-423c-bf12-4acd9aea6c0b"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nif}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="339" y="50" width="216" height="20" forecolor="#0000FF" uuid="5ff88fb6-e2b2-41f7-802e-86c51110b4fc"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{telefone}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="339" y="70" width="216" height="20" forecolor="#0000FF" uuid="965a6550-ec74-45bb-a9e4-65256b7b7b54"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="339" y="10" width="216" height="20" forecolor="#0000FF" uuid="45c39ffe-4d67-47a3-a95b-376fdcbb222c"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{endereco}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="0" y="10" width="100" height="70" uuid="86f07587-29e4-4232-a549-adc2be6a246f"/>
+				<imageExpression><![CDATA[$F{logimagem}]]></imageExpression>
+			</image>
+			<line>
+				<reportElement x="-14" y="154" width="583" height="1" forecolor="#6600FF" uuid="9c67cd69-ea9a-42a0-aabb-7214af2c6ce6"/>
+			</line>
+			<staticText>
+				<reportElement x="239" y="10" width="100" height="20" forecolor="#0000FF" uuid="31c2d50f-0a14-4a3a-957d-e8641cde22f8"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Endereço:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="239" y="30" width="100" height="20" forecolor="#0000FF" uuid="a8618a35-5705-4854-9e8a-10cc7de2483f"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[NIF:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="239" y="50" width="100" height="20" forecolor="#0000FF" uuid="bec5f79b-8800-4531-b3c8-22ed2d315688"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Telefone:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="239" y="70" width="100" height="20" forecolor="#0000FF" uuid="9995edc2-0113-4f8f-9a0a-a4396d2138ae"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[E-Mail:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="134" width="555" height="20" forecolor="#FF0000" uuid="e03b74c6-6e2c-4618-8b54-8e47641ffbaf"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Relatório de controle de Pagamentos Mensal]]></text>
+			</staticText>
+		</band>
+	</title>
+</jasperReport>

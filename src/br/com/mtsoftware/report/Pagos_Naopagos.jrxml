@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Pagos_Naopagos" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ea52efda-a3f8-4c7d-8e81-2d45cb0b6d46">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="Estado" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="num_parcela" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\Report\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select*from tbparcelas where Estado=$P{Estado}  and   num_parcela=$P{num_parcela}]]>
+	</queryString>
+	<field name="id_parcela" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id_contrato" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="valor_contrato" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="valor_total" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="valorparc" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="num_parcela" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="data_venc" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Estado" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="dataat" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="desconto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="multa" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="totalapag" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<subreport>
+				<reportElement x="0" y="0" width="555" height="79" uuid="5569e5d5-1ab3-46e3-81e5-2cc41fc2fcd4"/>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "Pagos_Naopagos_subreport1.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="15" width="57" height="20" uuid="4d78fb4d-e7d1-4fe3-b37c-7e753e3e82f4"/>
+				<text><![CDATA[ID Parcela]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="57" y="15" width="64" height="20" uuid="dfdb3ef6-150d-4e58-855c-39c0c3d3a611"/>
+				<text><![CDATA[ID Contrato]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="148" y="15" width="71" height="20" uuid="ad32fdd6-2f6a-439b-bcdd-6e2bce9c6b5a"/>
+				<text><![CDATA[Valor Contrato]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="234" y="15" width="69" height="20" uuid="2182e148-670e-4505-b1b6-a0a3a3a0aded"/>
+				<text><![CDATA[Valor Parcela]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="303" y="15" width="65" height="20" uuid="a9dcfc23-c38a-4495-8518-2273f8057c23"/>
+				<text><![CDATA[Nº Parcela]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="368" y="15" width="43" height="20" uuid="57359bdb-e754-40e3-9912-c20a771bf7ef"/>
+				<text><![CDATA[Situação]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="411" y="15" width="84" height="20" uuid="ef8f1935-299b-4e24-81da-c6d72408ddad"/>
+				<text><![CDATA[Data Pagamento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="495" y="15" width="60" height="20" uuid="be9e6fdc-7fcb-442c-85b9-4f84681e13bc"/>
+				<text><![CDATA[Total Pago]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="25" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="20" uuid="ab1feccd-cbfe-4fde-a4ef-32ac142f5c90"/>
+				<textFieldExpression><![CDATA[$F{id_parcela}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="75" y="0" width="73" height="20" uuid="d1488cf7-cb54-4b54-a4a4-a0bdc16552d1"/>
+				<textFieldExpression><![CDATA[$F{id_contrato}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="148" y="0" width="86" height="20" uuid="bf760d0d-494f-4b1f-8962-070d35d8f125"/>
+				<textFieldExpression><![CDATA[$F{valor_contrato}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="234" y="0" width="69" height="20" uuid="0ba1619a-82ce-41d5-a022-e52499e7ab53"/>
+				<textFieldExpression><![CDATA[$F{valorparc}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="303" y="0" width="65" height="20" uuid="5726aea0-a473-4cd4-90cf-4fd29b44d5ba"/>
+				<textFieldExpression><![CDATA[$F{num_parcela}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="368" y="0" width="53" height="20" uuid="7ef27c56-afb6-45f8-b4ea-f1c0e7ace3b5"/>
+				<textFieldExpression><![CDATA[$F{Estado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="421" y="0" width="63" height="20" uuid="912c23a2-3761-4441-892d-48cede6a1dd0"/>
+				<textFieldExpression><![CDATA[$F{dataat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="495" y="0" width="60" height="20" uuid="56de2f63-2d29-431b-b664-c3761b2df847"/>
+				<textFieldExpression><![CDATA[$F{totalapag}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="390" y="30" width="80" height="20" uuid="2a1e8055-1657-4aba-b951-e4b7c1883575"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="470" y="30" width="40" height="20" uuid="987c7b12-f148-45ad-8870-2373045acb0f"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

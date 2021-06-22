@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportos_subrepor" language="groovy" pageWidth="752" pageHeight="572" orientation="Landscape" columnWidth="752" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="87f14c33-591d-46d8-9f19-996d2a3f405e">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select*from tbempresa]]>
+	</queryString>
+	<field name="nome" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nif" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="endereco" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefone" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="email" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="log" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="logimagem" class="java.io.InputStream">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="119" splitType="Stretch">
+			<staticText>
+				<reportElement x="166" y="80" width="297" height="29" uuid="8bbfe957-0f3b-4460-afed-177f9bf4398b"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RELATÓRIO DE ORDEM DE SERVIÇOS]]></text>
+			</staticText>
+			<image>
+				<reportElement x="14" y="34" width="110" height="75" uuid="5edaa228-cdc1-457c-976d-f400288bf8d0"/>
+				<imageExpression><![CDATA[$F{logimagem}]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="136" splitType="Stretch">
+			<textField>
+				<reportElement x="289" y="51" width="285" height="20" uuid="852d8073-fb97-4070-83e6-5ade453ea181"/>
+				<textFieldExpression><![CDATA[$F{endereco}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="95" y="53" width="100" height="20" uuid="bdc80820-f702-4bf1-b553-74eed7722842"/>
+				<text><![CDATA[Endereço]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="95" y="91" width="100" height="20" uuid="9027cfb7-6137-419c-9c21-a7f2be604fd3"/>
+				<text><![CDATA[Email]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="289" y="73" width="285" height="20" uuid="d64ca9ec-9999-497f-8560-7bc8ff102760"/>
+				<textFieldExpression><![CDATA[$F{telefone}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="289" y="11" width="285" height="20" uuid="160278f1-b0a7-4b5e-ba47-ab6ed72ad3ff"/>
+				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="289" y="91" width="285" height="20" uuid="994f6be0-3844-4d92-aea0-543a1a378a53"/>
+				<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="95" y="71" width="100" height="20" uuid="9734254d-c084-4456-879d-59dd6fb443b4"/>
+				<text><![CDATA[Telefone]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="95" y="11" width="100" height="20" uuid="2877176e-ed7a-4a7f-841b-54f05ab787a2"/>
+				<text><![CDATA[Empresa]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="289" y="29" width="285" height="20" uuid="d996bd5f-78f3-4745-af42-1b5042ac4d59"/>
+				<textFieldExpression><![CDATA[$F{nif}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="95" y="31" width="100" height="20" uuid="2595d4b3-621a-4cfc-ae1b-143337bc1f18"/>
+				<text><![CDATA[NIF]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="0" width="752" height="3" forecolor="#000099" backcolor="#3366FF" uuid="fb206c6e-71bb-4abe-a41f-1a87cdef3234"/>
+			</line>
+		</band>
+	</columnHeader>
+</jasperReport>
