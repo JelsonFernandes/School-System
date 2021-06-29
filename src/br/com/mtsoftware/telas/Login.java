@@ -213,22 +213,24 @@ public class Login extends javax.swing.JFrame {
                     valiadacao.setVisible(true);
                     Desktop.add(valiadacao);
 //                    TelaPrincipal.jMenParcelas.setEnabled(false);
-                    TelaPrincipal.jMenuBoletim.setEnabled(false);
-                    TelaPrincipal.menContratos.setEnabled(false);
-                    TelaPrincipal.menPagamentos.setEnabled(false);
-                    TelaPrincipal.menCadastro.setEnabled(false);
-                    TelaPrincipal.menClasses.setEnabled(false);
-                    TelaPrincipal.jMenuItemMensaldade.setEnabled(false);
-                    TelaPrincipal.nenCadCli.setEnabled(false);
-                    TelaPrincipal.menCadUsu.setEnabled(false);
-                    TelaPrincipal.menCadEmpre.setEnabled(false);
-                    TelaPrincipal.menFuncionarios.setEnabled(false);
-                    TelaPrincipal.Escola.setEnabled(false);
-                    TelaPrincipal.jMenuItemCadProdutos.setEnabled(false);
-                    TelaPrincipal.jMenuItemVenda.setEnabled(false);
-                    TelaPrincipal.jMenuItemBaixaVenda.setEnabled(false);
-                    TelaPrincipal.jMenuItemPesquiVendas.setEnabled(false);
-                    TelaPrincipal.jMenuItemFinancas.setEnabled(false);
+                   //Validação temporaria para a versao gratis
+                        TelaPrincipal.jMenuItemMensaldade.setEnabled(true);
+                        TelaPrincipal.jMenuBoletim.setEnabled(true);
+                        TelaPrincipal.menContratos.setEnabled(true);
+                        TelaPrincipal.menPagamentos.setEnabled(true);
+                        TelaPrincipal.menCadastro.setEnabled(true);
+                        TelaPrincipal.menClasses.setEnabled(true);
+                        TelaPrincipal.jMenuItemMensaldade.setEnabled(true);
+                        TelaPrincipal.nenCadCli.setEnabled(true);
+                        TelaPrincipal.menCadUsu.setEnabled(true);
+                        TelaPrincipal.menCadEmpre.setEnabled(true);
+                        TelaPrincipal.menFuncionarios.setEnabled(true);
+                        TelaPrincipal.Escola.setEnabled(true);
+                        TelaPrincipal.jMenuItemCadProdutos.setEnabled(false);
+                        TelaPrincipal.jMenuItemVenda.setEnabled(false);
+                        TelaPrincipal.jMenuItemBaixaVenda.setEnabled(true);
+                        TelaPrincipal.jMenuItemPesquiVendas.setEnabled(false);
+                        TelaPrincipal.jMenuItemFinancas.setEnabled(true);
 
                 }
                 this.dispose();
@@ -377,7 +379,7 @@ public class Login extends javax.swing.JFrame {
         jLabel4.setBackground(new java.awt.Color(204, 204, 204));
         jLabel4.setFont(new java.awt.Font("RomanT", 1, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(51, 0, 255));
-        jLabel4.setText("TOKES MULTI SOFT");
+        jLabel4.setText("INFOTOKES SCHOOL SYSTEM");
         jLabel4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/mtsoftware/icones/LOGSOFT_Small-3.png"))); // NOI18N
@@ -638,23 +640,24 @@ public class Login extends javax.swing.JFrame {
                         ValidacaoDoSistema valiadacao = new ValidacaoDoSistema();
                         valiadacao.setVisible(true);
                         Desktop.add(valiadacao);
-                        TelaPrincipal.jMenuItemMensaldade.setEnabled(false);
-                        TelaPrincipal.jMenuBoletim.setEnabled(false);
-                        TelaPrincipal.menContratos.setEnabled(false);
-                        TelaPrincipal.menPagamentos.setEnabled(false);
-                        TelaPrincipal.menCadastro.setEnabled(false);
-                        TelaPrincipal.menClasses.setEnabled(false);
-                        TelaPrincipal.jMenuItemMensaldade.setEnabled(false);
-                        TelaPrincipal.nenCadCli.setEnabled(false);
-                        TelaPrincipal.menCadUsu.setEnabled(false);
-                        TelaPrincipal.menCadEmpre.setEnabled(false);
-                        TelaPrincipal.menFuncionarios.setEnabled(false);
-                        TelaPrincipal.Escola.setEnabled(false);
+                        //Validação temporaria para a versao gratis
+                        TelaPrincipal.jMenuItemMensaldade.setEnabled(true);
+                        TelaPrincipal.jMenuBoletim.setEnabled(true);
+                        TelaPrincipal.menContratos.setEnabled(true);
+                        TelaPrincipal.menPagamentos.setEnabled(true);
+                        TelaPrincipal.menCadastro.setEnabled(true);
+                        TelaPrincipal.menClasses.setEnabled(true);
+                        TelaPrincipal.jMenuItemMensaldade.setEnabled(true);
+                        TelaPrincipal.nenCadCli.setEnabled(true);
+                        TelaPrincipal.menCadUsu.setEnabled(true);
+                        TelaPrincipal.menCadEmpre.setEnabled(true);
+                        TelaPrincipal.menFuncionarios.setEnabled(true);
+                        TelaPrincipal.Escola.setEnabled(true);
                         TelaPrincipal.jMenuItemCadProdutos.setEnabled(false);
                         TelaPrincipal.jMenuItemVenda.setEnabled(false);
-                        TelaPrincipal.jMenuItemBaixaVenda.setEnabled(false);
+                        TelaPrincipal.jMenuItemBaixaVenda.setEnabled(true);
                         TelaPrincipal.jMenuItemPesquiVendas.setEnabled(false);
-                        TelaPrincipal.jMenuItemFinancas.setEnabled(false);
+                        TelaPrincipal.jMenuItemFinancas.setEnabled(true);
 
                     }
                     this.dispose();

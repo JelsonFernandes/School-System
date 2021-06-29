@@ -225,9 +225,9 @@ Connection conexao = null;
         jLabel4.setForeground(new java.awt.Color(0, 51, 204));
         jLabel4.setText("USUÁRIO:");
 
-        jLabel1.setFont(new java.awt.Font("Olympus", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Olympus", 1, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(51, 153, 255));
-        jLabel1.setText("TOKES MULTISOFT");
+        jLabel1.setText("INFOTOKES SCHOOL SYSTEM");
 
         jlabelempresa.setBackground(new java.awt.Color(255, 255, 255));
         jlabelempresa.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -528,7 +528,6 @@ Connection conexao = null;
         jMenuItemVenda.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jMenuItemVenda.setForeground(new java.awt.Color(51, 204, 255));
         jMenuItemVenda.setText("VENDA");
-        jMenuItemVenda.setEnabled(false);
         jMenuItemVenda.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItemVendaActionPerformed(evt);
@@ -610,7 +609,6 @@ Connection conexao = null;
         MenRel.setForeground(new java.awt.Color(0, 153, 204));
         MenRel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/mtsoftware/icones/relatório.png"))); // NOI18N
         MenRel.setText("RELATÓRIOS");
-        MenRel.setEnabled(false);
         MenRel.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         MenRel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -734,9 +732,9 @@ Connection conexao = null;
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(42, 42, 42)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabelNLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabelNLogo, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
                                     .addComponent(jLabel5))
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
+                                .addGap(102, 102, 102))))))
             .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
